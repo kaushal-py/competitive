@@ -5,11 +5,13 @@
 #include <numeric>
 using namespace std;
 
+void solve_t();
+
 int main(){
 
-    // solve_nvt()
-    // solve()
-    // solve_t()
+    // solve_nvt();
+    // solve();
+    // solve_t();
     
 }
 
@@ -36,7 +38,6 @@ void solve_nvt(){
     while(t--){
         int i,j,k,n;
         cin >> n;
-        int n;
 
         vector<int> v;
 
