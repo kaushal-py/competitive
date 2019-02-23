@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+using namespace std;
+
+void solve_t();
+
+int main(){
+
+    // solve_nvt();
+    // solve();
+    solve_t();
+    
+}
+
+
+void solve_t(){
+    
+    int t;
+    cin >> t;
+
+    while(t--){
+        int n,k,v;
+
+        cin >> n >> k >> v;
+
+        int sum=0;
+        for(int i=0; i<n; i++){
+            int temp;
+            cin >> temp;
+            sum += temp;
+        }
+
+        int num = v*(n+k) - sum;
+        if(num > 0 && num%k == 0){
+            cout << num/k << endl;
+        }
+        else{
+            cout << -1 << endl;
+        }
+    }
+}
+
+void solve_nvt(){
+
+    int t;
+    cin >> t;
+    
+    while(t--){
+        int i,j,k,n;
+        cin >> n;
+
+        vector<int> v;
+
+        for(int i=0; i<n; i++){
+            int temp;
+            cin >> temp;
+            v.push_back(temp);
+        }
+
+    }
+}
