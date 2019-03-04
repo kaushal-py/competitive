@@ -61,27 +61,28 @@ int main(){
             //     cout << "  ";
             // }
 
-            // set<int> s;
+            vector<int> v;
             for(int j=i; j<n; j++){
 
                 // cout << i << ' ' <<  j << endl;
-         
+                vector<int>::iterator vit;
+                vit = lower_bound(v.begin(), v.end(), arr[j]);
+                v.insert(vit, arr[j]);
                 int m = ceil((double)k/(j-i+1));
                 // cout << "m=" << m << endl;
                 int pos = (k-1)/m;
                 // cout << "Pos =" << pos << endl;
-                vector<int> v2(arr.begin()+i, arr.begin()+j+1);
+                // vector<int> v2(arr.begin()+i, arr.begin()+j+1);
 
                 // for(int x:v2){
                 //     cout << x << ' ';
                 // }
                 // cout << endl;
 
-                sort(v2.begin(),v2.end());
-                int X = v2[pos];
+                int X = v[pos];
                 // cout << "X = " << X << endl;
                 int F = occ[X][j+1] -occ[X][i] ;
-                cout  << pos << ' ';
+                // cout  << pos << ' ';
                 // cout  << occ[F][j+1] -occ[F][i] << ' ';
 
                 if(occ[F][j+1] -occ[F][i] > 0){
@@ -92,7 +93,7 @@ int main(){
                 // cout << "---------------------" << endl;              
 
             }
-            cout << endl;
+            // cout << endl;
         }
         cout << count << endl;
     }
